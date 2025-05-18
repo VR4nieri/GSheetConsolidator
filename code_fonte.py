@@ -65,7 +65,7 @@ for planilha in planilhas:
         for aba in arquivo.worksheets():
             nome_aba = aba.title
             nome_normalizado = nome_aba.lower()
-            if re.search(r'aula\s*', nome_normalizado) and 'mini' in nome_normalizado:
+            if re.search(r'aula\s*', nome_normalizado) and 'exemplo' in nome_normalizado: //personalizar aqui de acordo com o que tem no titulo das abas
                 print(f"Lendo aba: {nome_aba} da planilha: {titulo}")
                 df = get_as_dataframe(aba, evaluate_formulas=True, dtype=str, header=None)
                 df.columns = df.columns.astype(str)
